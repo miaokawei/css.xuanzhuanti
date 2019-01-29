@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转体</title>
+    <style>
+        body{
+            background: #000;
+            perspective: 800px;
+        }
+        #contain {
+            margin:40px auto;
+            height: 300px;
+            width:300px;
+            transform-style:preserve-3d;
+            animation: xxx 2s linear infinite;
+        }
+        @keyframes xxx{
+            from{
+
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+         div:not(#contain){
+            height: 240px;
+            width:240px;
+            background:rgba(255,255,255,.5);
+            position: absolute;
+            line-height: 200px;
+            text-align:center;
+            font-size: 40px;
+             border-radius: 10px;
+        }
+        .div1 {
+            transform: rotateX(90deg)  translateZ(120px);
+        }
+        .div2 {
+            z-index: 1;
+            transform:translateZ(120px);
+        }
+        .div3{
+            transform: rotateY(90deg)   translateZ(120px);
+        }
+        .div4 {
+            transform: translateZ(-120px) rotateY(180deg) ;
+        }
+        .div5{
+            transform: rotateY(-90deg)   translateZ(120px);
+        }
+        .div6 {
+            transform:rotateX(-90deg)   translateZ(120px);
+        }
+    </style>
+
+</head>
+<body>
+        <div id="contain">
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+            <div class="div5">5</div>
+            <div class="div6">6</div>
+        </div>
+</body>
+</html>
